@@ -1,10 +1,10 @@
 // Global Variables
 int aWidth, aHeight;
-float x0, x1, x2, y0, y1, y2, y3, yTop, xTop0, xTop1, xTop2, wSquare, hSquare, wCircle;
-float x0c, x1c, x2c, y0c, y1c, y2c, y3c;
+int x0, x1, x2, y0, y1, y2, y3, yTop, xTop0, xTop1, xTop2;
+int x0c, x1c, x2c, y0c, y1c, y2c, y3c;
 Boolean circleOver = false;
 color circleHover, circleColor;
-int circleX, circleY, circleSize;
+int wCircle, wSquare, hSquare;
 //
 void setup() {
   size(500, 750);
@@ -17,11 +17,17 @@ void setup() {
 } // End setup
 //
 void draw() {
+  update(mouseX, mouseY);
   ellipseMode(CENTER);
   fill(#FFFFFF);
   /*rect(xTop0, yTop, wSquare, hSquare); //
    rect(xTop1, yTop, wSquare, hSquare);
    rect(xTop2, yTop, wSquare, hSquare);*/
+   if (circleOver) {
+    fill(circleHover);
+  } else {
+    fill(circleColor);
+  }
   circle(x0c, y0c, wCircle); // 1st
   circle(x1c, y0c, wCircle); // 2nd
   circle(x2c, y0c, wCircle); // 3rd
@@ -48,20 +54,15 @@ void draw() {
    rect(x2, y3, wSquare, hSquare); // Go
    */
   //
-  if (circleOver) {
-    fill(circleHover);
-  } else {
-    fill(circleColor);
-  }
+  
   stroke(0);
-  ellipse(circleX, circleY, circleSize, circleSize);
 } // End draw
 //
 void keyPressed() {
 } // End keyPressed
 //
 void update(int x, int y) {
-   if ( HoverOverCircle(circleX, circleY, circleSize) ) {
+   if ( HoverOverCircle(x0c, y0c, wCircle) ) {
     circleOver = true;
   } else {
     circleOver = false;
@@ -79,7 +80,7 @@ boolean HoverOverCircle(int x, int y, int diameter) {
   }
 } //
 void mousePressed() {
-  if (HoverOverCircle = true) {
+  if (circleOver = true) {
     fill(circleHover);
     if (mousePressed) {
       println("1");
