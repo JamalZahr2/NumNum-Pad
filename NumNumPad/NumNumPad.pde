@@ -237,10 +237,98 @@ boolean HoverOverCircle(int x, int y, int diameter) {
   }
 } //
 void mousePressed() {
-  if (circleOver1 = true) {
+  if (circleOver1 = true && HoverOverCircle(x0c, y0c, wCircle) ) {
     fill(circleHover);
     if (mousePressed) {
       println("1");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver2 = true && HoverOverCircle(x1c, y0c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("2");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver3 = true && HoverOverCircle(x2c, y0c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("3");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver4 = true && HoverOverCircle(x0c, y1c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("4");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver5 = true && HoverOverCircle(x1c, y1c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("5");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver6 = true && HoverOverCircle(x2c, y1c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("6");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver7 = true && HoverOverCircle(x0c, y2c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("7");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver8 = true && HoverOverCircle(x1c, y2c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("8");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver9 = true && HoverOverCircle(x2c, y2c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("9");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver10 = true && HoverOverCircle(x0c, y3c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("Back");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver11 = true && HoverOverCircle(x1c, y3c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("0");
+    }
+  } else {
+    fill(circleColor);
+  }
+  if (circleOver12 = true && HoverOverCircle(x2c, y3c, wCircle) ) {
+    fill(circleHover);
+    if (mousePressed) {
+      println("Go!");
     }
   } else {
     fill(circleColor);
