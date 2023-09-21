@@ -19,6 +19,7 @@ void setup() {
 void draw() {
   update(mouseX, mouseY);
   ellipseMode(CENTER);
+  stroke(0);
   /*rect(xTop0, yTop, wSquare, hSquare); //
    rect(xTop1, yTop, wSquare, hSquare);
    rect(xTop2, yTop, wSquare, hSquare);*/
@@ -124,9 +125,6 @@ void draw() {
    rect(x1, y3, wSquare, hSquare); // 0th?
    rect(x2, y3, wSquare, hSquare); // Go
    */
-  //
-  
-  stroke(0);
 } // End draw
 //
 void keyPressed() {
