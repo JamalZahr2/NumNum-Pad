@@ -9,6 +9,14 @@ int wCircle, wSquare, hSquare;
 void setup() {
   size(500, 750);
   population();
+  //background(cantgoanyfarther);
+  //background(#4405ff); // 5 Layers in
+  //background(#4406fe); // 4 Layers in
+  //background(#4209fc); // 3 Layers in
+  //background(#3e0ff9); // 2 Layers in
+  //background(#371af3); // 1 Layer in
+  background(#2e2ee6); // Original
+  //background(#0000FF); // Old
   //
   // Population of rect(); variables
   // Nested for(); reading rect(); arrays
@@ -19,7 +27,8 @@ void setup() {
 void draw() {
   update(mouseX, mouseY);
   ellipseMode(CENTER);
-  stroke(0);
+  noStroke();
+  strokeWeight(0);
   /*rect(xTop0, yTop, wSquare, hSquare); //
    rect(xTop1, yTop, wSquare, hSquare);
    rect(xTop2, yTop, wSquare, hSquare);*/
@@ -111,7 +120,7 @@ void draw() {
   } else {
     fill(circleColor);
   }*/
-  fill(#FFFFFF);
+  fill(#000000);
   /*rect(x0, y0, wSquare, hSquare); // 1st
    rect(x1, y0, wSquare, hSquare); // 2nd
    rect(x2, y0, wSquare, hSquare); // 3rd
@@ -125,6 +134,7 @@ void draw() {
    rect(x1, y3, wSquare, hSquare); // 0th?
    rect(x2, y3, wSquare, hSquare); // Go
    */
+   
 } // End draw
 //
 void keyPressed() {
@@ -233,7 +243,7 @@ boolean HoverOverCircle(int x, int y, int diameter) {
   } else {
     return false;
   }
-} //
+}
 void mousePressed() {
   if (circleOver1 = true && HoverOverCircle(x0c, y0c, wCircle) ) {
     fill(circleHover);

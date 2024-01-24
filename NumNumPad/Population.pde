@@ -25,6 +25,6 @@ void population() {
   y2c = hSquare * 8/2;
   y3 = hSquare * 9/2;
   y3c = hSquare * 10/2;
-  circleHover = #000000;
-  circleColor = #FFFFFF;
+  circleHover = #6131e6;
+  circleColor = #4503FF;
 } // End of population
